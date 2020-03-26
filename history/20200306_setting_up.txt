@@ -1,0 +1,54 @@
+## list items sort with time
+alias lth='ls -lth'
+lth
+## mounting a drive and foreign directory 
+lth /mnt/c/Users/ADDSAM004/Downloads/
+
+## installing predownloaded anaconda tool (we need the help download other package) 
+bash /mnt/c/Users/ADDSAM004/Downloads/Anaconda3-2020.02-Linux-x86_64.sh 
+
+## to activate the anaconda environment 
+source /home/sam/.bashrc
+conda config --append channel bioconda
+conda config --append channels bioconda
+conda config --append channels conda-forge
+conda instal --channel bioconda biopython
+conda install --channel bioconda biopython
+conda config --append channels schrodinger
+conda install -c schrodinger modeller
+conda install -c schrodinger pymol
+conda config --append salilab
+conda config --append channels salilab
+
+## Putting the modullar key in memmory 
+KEY_MODELLER='xxx'
+
+##creatingg the environment for modeller installation 
+conda install --channel salilab modeller
+## checking moduller version 
+mod9.23 
+
+## the script was source because of the function that was in it. It cannot run as bash 
+source script.sh 
+
+##Molecular dynamic simulation function name
+gromMDS 
+
+## it was run on nochpc because we were running it on the local machine 
+gromMDS nohpc 1aki.pdb 
+
+## gromacs was installed to view the .png file 
+sudo apt-get install gromacs
+## rerun of the modulling
+gromMDS nohpc 1aki.pdb 
+
+#### updating the tool for intalling packages 
+sudo apt-get update
+
+### Installing gromacs dependencies
+sudo apt-get install lam-runtime mpich openmpi-bin slurm-wlm-torque 
+gromMDS nohpc 1aki.pdb 
+
+### change mode (change user rights of files and directories)
+chmod 755 *
+
